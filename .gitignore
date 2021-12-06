@@ -1,0 +1,5 @@
+emoji_scraper/**/*.png
+
+# Added by cargo
+
+/target

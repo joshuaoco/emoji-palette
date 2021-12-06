@@ -1,0 +1,23 @@
+* emoji_palette
+This tool creates an illustration showing the combined colours of a number of emojis given on the commandline
+** Motivation
+Around November 2021, there was a TikTok trend to create palettes of colours from a given set of emoji.
+This was usually accomplished using the blend tool in a paint program.
+I thought it would be fun to automate it, learn a bit about how emojis are represented, and learn a bit about colour mixing.
+** Usage
+*** Preparing Emojis
+Not shipped with this tool are the actual PNGs for creating the emoji palettes.
+This is because I can't be bothered to work out the licences.
+Instead, included is a python script which as of 2021-11-20 will scrape the emojis from the Unicode website.
+*** Usage
+It's a simple tool so I'll leave in depth stuff to ~--help~ here is an example though
+: emoji-palette -p twitter -s 500 -r "emoji_scraper" 🍑 🍌 🦫
+Will output [[file:emoji_palette.png]]
+** Colour mixing
+Colour mixing doesn't appear to be a precise art, which makes sense considering human colour perception is not a precise sense.
+Given that, I've gone for the simplest approach I could implement, which may very well not produce "nice" outputs, but again this was mostly for fun
+
+The emoji are resolved to a single colour by simply resizing them to a 1x1 pixel using a standard flitering technique.
+These colours are then blended by taking an average of the R/G/B values, which is a simple model.
+
+I may revisit this and add alternate colour blending options, once I've researched it more
