@@ -71,7 +71,7 @@ fn main() {
         .unwrap()
         .map(|s| EmojiSpec {
             code: s.to_owned(),
-            platform: platform.to_owned(), // TODO:  Use parameterised version
+            platform: platform.to_owned(),
         })
         .map(|x| emoji_store.emoji_image(x).unwrap())
         .map(EmojiColor::from)
