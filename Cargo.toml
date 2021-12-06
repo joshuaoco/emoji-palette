@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-image = "0.23.14"
-imageproc = "0.22.0"
+image = {version = "0.23.14", default-features = false, features = ["png"]}
+imageproc = {version = "0.22.0", default-features = false}
 anyhow = "1.0"
 clap = "2.32"
